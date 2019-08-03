@@ -1,7 +1,7 @@
 <template>
   <div id="TempGroup">
     <!--创建一个echarts的容器-->
-    <div id="Temp" style="width:250px; height:160px;"></div>
+    <div id="Temp" style=" height:200px;"></div>
   </div>
 </template>
 
@@ -33,8 +33,8 @@ export default {
         top: "20%",
         bottom: "2%",
         containLabel: true,
-        width: 220,
-        height: 120,
+        width: "92%",
+        height: 110,
         show: true,
         //阴影
         // shadowColor: "white",
@@ -119,13 +119,13 @@ export default {
 <style scoped>
 #TempGroup {
   margin-top: 40px;
+  padding: 20px 10px 0 10px;
 }
 
 #Temp {
   background-color: #47607e;
-
   border-radius: 15px;
-  margin-bottom: 10px;
+
 }
 </style>
 

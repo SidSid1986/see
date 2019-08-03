@@ -1,7 +1,7 @@
 <template>
   <div id="TempGroup">
     <!--创建一个echarts的容器-->
-    <div id="RH" style="width:250px; height:160px;"></div>
+    <div id="RH" style=" height:200px;"></div>
   </div>
 </template>
 
@@ -33,7 +33,7 @@ export default {
         top: "20%",
         bottom: "2%",
         containLabel: true,
-        width: 220,
+        width: "92%",
         height: 120,
         show: true,
         //阴影
@@ -92,6 +92,12 @@ export default {
           name: "湿度",
           type: "bar",
           data: [5, 20, 36, 10, 10, 20],
+          label:{
+            show:true,
+            fontWeight:"bold",
+            color:"#FFFFFF",
+            fontSize:10,
+          },
           itemStyle: {
             // 点的颜色。
             color: "#47607e"
@@ -119,16 +125,14 @@ export default {
 <style scoped>
 #TempGroup {
   margin-top: 10px;
-  width:25%;
+  padding: 0px 10px 0 10px;
+  
 }
 
 #RH {
   /* background-color: #47607e; */
   background-color: #00BDB1;
-
-
   border-radius: 15px;
-  margin-bottom: 30px;
 }
 </style>
 

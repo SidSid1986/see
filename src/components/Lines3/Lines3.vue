@@ -1,7 +1,7 @@
 <template>
   <div class="Lines3GroupBorder">
     <div class="Lines3Group">
-      <div id="Lines3" style="width:450px; height:330px;"></div>
+      <div id="Lines3" style="height:410px;"></div>
     </div>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
     // 基于准备好的dom，初始化echarts实例
     let myChart = echarts.init(document.getElementById("Lines3"));
 
-    var geoCoordMap = {
+    let geoCoordMap = {
       海门: [121.15, 31.89],
       鄂尔多斯: [109.781327, 39.608266],
       招远: [120.38, 37.35],
@@ -208,7 +208,7 @@ export default {
       大庆: [125.03, 46.58]
     };
 
-    var convertData = function(data) {
+    let convertData = function(data) {
       var res = [];
       for (var i = 0; i < data.length; i++) {
         var geoCoord = geoCoordMap[data[i].name];
@@ -248,7 +248,7 @@ export default {
         data: ["pm2.5"],
         textStyle: {
           color: "#fff"
-        }
+        },
       },
       visualMap: {
         min: 0,
@@ -276,7 +276,8 @@ export default {
           emphasis: {
             areaColor: "#2a333d"
           }
-        }
+        },
+        
       },
       series: [
         {
@@ -505,11 +506,8 @@ export default {
 
 <style scoped>
 .Lines3Group {
-  height: 330px;
-  width: 450px;
   /* background-color: red; */
   margin-top: 50px;
-  /* padding: 10px 20px; */
   border-radius: 15px;
   overflow: hidden;
 }
@@ -517,4 +515,10 @@ export default {
 .Lines3GroupBorder {
   padding: 10px 0px;
 }
+
+.Lines3 {
+  
+}
+
+
 </style>

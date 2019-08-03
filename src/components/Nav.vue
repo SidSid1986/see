@@ -6,7 +6,7 @@
         <div class="HomeNavTitle">监控和网络中心</div>
       </el-col>
       <el-col :span="6">
-        <div class="HomeNavTime">{2019-07-29}</div>
+        <div class="HomeNavTime">{{time}}</div>
       </el-col>
     </el-row>
   </div>
@@ -15,44 +15,60 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      time: ''
+    };
   },
-  components: {}
+
+  mounted() {
+    // this.time =  this.moment(new Date()).format("YYYY-MM-DD HH:mm:ss");
+
+    setInterval(() => {
+      this.time =  this.moment(new Date()).format("YYYY-MM-DD HH:mm:ss");
+    }, 1000)
+      
+  },
+
+  components: {},
+  computed: {
+    newDate() {
+     return 1
+    }
+  },
+  methods: {}
 };
 </script>
 
 <style scoped>
 .Nav {
-  /* position: fixed; */
+  position: fixed;
+  width: 100%;
+  z-index: 9999999;
 }
 
 .HomeNav {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height:50px;
-  background-color: #606C78;
-  box-shadow: 0px 0px 2px 3px #4D5D6C;
-  position: fixed;
-  width:100%;
+  height: 50px;
+  background-color: #606c78;
+  box-shadow: 0px 0px 2px 3px #4d5d6c;
 }
 
 .HomeNavTitle {
   text-align: center;
   height: 50px;
   line-height: 50px;
-  color:#FFFFFF;
+  color: #ffffff;
   font-weight: bold;
   font-size: 30px;
-  
 }
 
 .HomeNavTime {
   text-align: center;
   height: 50px;
   line-height: 50px;
-  color:#FFFFFF;
+  color: #ffffff;
   font-weight: bold;
 }
-
 </style>
