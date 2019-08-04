@@ -2,7 +2,9 @@
   <div class="LoginPage">
     <el-row type="flex" class="row-bg flexBorder">
       <el-col :span="12">
-        <div class="grid-content logoHeight"></div>
+        <div class="grid-content logoHeight bgLogo">
+          <img src="../assets/bgLogo.png" alt="">
+        </div>
       </el-col>
       <el-col :span="12">
         <div class="grid-content loginBorder">
@@ -39,7 +41,14 @@ export default {
       }
     };
   },
-  components: {}
+  components: {
+
+  },
+  methods: {
+    onSubmit(){
+      this.$router.push({name:'Home'})
+    }
+  },
 };
 </script>
 
@@ -55,9 +64,14 @@ export default {
   border-radius: 10px;
 }
 
+.bgLogo img{
+  width:100%;
+  height:500px;
+}
+
 .logoHeight {
-  height: 200px;
-  border: 1px solid blue;
+  height:500px;
+  /* border: 1px solid blue; */
 }
 
 .flexBorder {
