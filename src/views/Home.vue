@@ -12,8 +12,9 @@
           <Lines3 />
         </div>
         <div class="FirstLineRight">
-          <UPS />
-          <ScrollView/>
+          <Alarm/>
+          <!-- <ScrollView/> -->
+          <!-- <UPS /> -->
         </div>
       </div>
       <!-- 底部一行 -->
@@ -49,10 +50,12 @@ import Lines3 from "../components/Lines3/Lines3";
 import UPS from "../components/UPS.vue";
 import ScrollView from '../components/ScrollView'
 
-import Table1 from '../components/Table/Table1'
-import Table2 from '../components/Table/Table2'
-import Table3 from '../components/Table/Table3'
+import Table1 from '../components/Table/Table1/Table1'
+import Table2 from '../components/Table/Table2/Table2'
+import Table3 from '../components/Table/Table3/Table3'
 import Table4 from '../components/Table/Table4'
+
+import Alarm from '../components/Alarm.vue'
 
 import Footer from '../components/Footer'
 
@@ -67,12 +70,14 @@ export default {
     Lines,
     Lines2,
     Lines3,
+    Alarm,
     UPS,
     ScrollView,
     Table1,
     Table2,
     Table3,
     Table4,
+
     Footer
   }
 };

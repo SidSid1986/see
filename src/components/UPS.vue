@@ -83,9 +83,9 @@ export default {
 
 <style scoped>
 #UPSGroup {
-  margin-top: 40px;
+  /* margin-top: 40px; */
   position: relative;
-  padding: 20px 10px 0 10px;
+  padding: 0px 10px 0 10px;
 }
 
 #UPS {

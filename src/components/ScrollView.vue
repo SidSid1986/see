@@ -132,6 +132,7 @@ export default {
   padding: 0px 10px 10px 10px;
   overflow: hidden;
   font-size: 14px;
+  margin-top: 60px;
 }
 
 .luckyRoll {

@@ -4,6 +4,10 @@
       <span>防火墙</span>
     </div>
 
+    <div class="DetailLogo" @click="gotoDetail">
+      <img src="../../../../public/logo/detail.png" alt="">
+    </div>
+
      <div class="TableTitleSecond">
       <div class="width25">设备</div>
       <div class="width30">接口</div>
@@ -21,8 +25,8 @@
       >
         <div class="itemName textColor width25 ">{{item.name}}</div>
         <div class="itemTitle textColor width30">{{item.title}}</div>
-        <div class="itemStaff textColor width30">{{item.staff}}</div>
-        <div class="itemStaff textColor width15">{{item.date}}</div>
+        <div class="itemStaff textColor width25">{{item.staff}}</div>
+        <div class="itemStaff textColor width20">{{item.date}}</div>
 
       </div>
     </GeminiScrollbar>
@@ -100,13 +104,23 @@ export default {
       ]
     };
   },
+
+  methods: {
+    gotoDetail(){
+      console.log(1);
+      this.$router.push({name:'Table2Detail'})
+      // this.$router.push({ path: '/Table2Detail'})
+    }
+  },
+
   components: {}
 };
 </script>
 
 <style scoped>
 .Table2 {
-  margin: 0px 5px 0px 5px;
+  position: relative;
+  margin: 0px 5px 0px 0px;
   overflow: hidden;
   font-size: 14px;
   height: 190px;
@@ -162,6 +176,12 @@ export default {
   justify-content:space-around;
   color:#FFFFFF;
   text-align: left;
+}
+
+.DetailLogo {
+  position:absolute;
+  top: 5px;
+  right:5px;
 }
 
 

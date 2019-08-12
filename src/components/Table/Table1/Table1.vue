@@ -1,7 +1,11 @@
 <template>
-  <div class="Table2">
+  <div class="Table1">
     <div class="TableTitle">
       <span>虚拟服务器</span>
+    </div>
+
+    <div class="DetailLogo" @click="gotoDetail">
+      <img src="../../../../public/logo/detail.png" alt="">
     </div>
 
     <div class="TableTitleSecond">
@@ -70,12 +74,21 @@ export default {
       ]
     };
   },
+
+  methods: {
+    gotoDetail(){
+      console.log(1);
+      this.$router.push({name:'Table1Detail'})
+      // this.$router.push({ path: '/Table2Detail'})
+    }
+  },
   components: {}
 };
 </script>
 
 <style scoped>
-.Table2 {
+.Table1 {
+  position: relative;
   margin: 0px 10px 0px 10px;
   overflow: hidden;
   font-size: 14px;
@@ -132,6 +145,12 @@ export default {
   justify-content:space-around;
   color: #ffffff;
   text-align: center;
+}
+
+.DetailLogo {
+  position:absolute;
+  top: 5px;
+  right:5px;
 }
 
 .width10 {
