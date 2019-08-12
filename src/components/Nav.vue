@@ -1,7 +1,9 @@
 <template>
   <div class="Nav">
     <el-row class="row-bg HomeNav">
-      <el-col :span="6"></el-col>
+      <el-col :span="6">
+        <NavList/>
+      </el-col>
       <el-col :span="12">
         <div class="HomeNavTitle">监控和网络中心</div>
       </el-col>
@@ -13,6 +15,8 @@
 </template>
 
 <script>
+import NavList from '@/components/NavList'
+
 export default {
   data() {
     return {
@@ -29,7 +33,9 @@ export default {
       
   },
 
-  components: {},
+  components: {
+    NavList 
+  },
   computed: {
     newDate() {
      return 1

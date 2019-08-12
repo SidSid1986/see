@@ -3,12 +3,15 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+
+
 //normalize
 import '../node_modules/normalize.css/normalize.css'
 
 //element UI
 import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
+// import 'element-ui/lib/theme-chalk/index.css'
+import '../src/green/theme/index.css'
 Vue.use(ElementUI)
 
 //自动滚动

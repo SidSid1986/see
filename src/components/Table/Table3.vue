@@ -5,11 +5,12 @@
     </div>
 
     <div class="TableTitleSecond">
-      <div class="width20">省内(万件)</div>
-      <div class="width20">省外(万件)</div>
-      <div class="width20">省外(万件)</div>
-      <div class="width25">总业务量(万件)</div>
-      <div class="width15">日期</div>
+      <div class="width25">设备</div>
+      <div class="width10">接口</div>
+      <div class="width15">时延</div>
+      <div class="width20">负载</div>
+      <div class="width15">防雷等级</div>
+      <span class="width15">详情</span>
     </div>
 
     <GeminiScrollbar :autoshow="true" class="ScrollBorder">
@@ -17,13 +18,15 @@
         class="ListTable"
         :class="[index%2==1 ?'ListBgcOne':'ListBgcTwo']"
         v-for="(item, index) in List"
-        :key="index"
+        :key="item.id"
       >
-        <div class="itemName textColor width20">{{item.name}}</div>
-        <div class="itemTitle textColor width20">{{item.title}}</div>
-        <div class="itemStaff textColor width20">{{item.staff}}</div>
-        <div class="itemStaff textColor width25">{{item.text}}</div>
+        <div class="itemName textColor width25">{{item.name}}</div>
+        <div class="itemTitle textColor width10">{{item.title}}</div>
+        <div class="itemStaff textColor width15">{{item.staff}}</div>
+        <div class="itemStaff textColor width20">{{item.text}}</div>
         <div class="itemStaff textColor width15">{{item.date}}</div>
+        <span  @click="showFlag(item.id)" class="itemStaff textColor width15 info">详情</span>
+        <div class="propInfo" v-if="Flag==item.id">123</div>
       </div>
     </GeminiScrollbar>
   </div>
@@ -32,82 +35,95 @@
 <script>
 export default {
   data() {
+   
     return {
+      Flag:'',
       List: [
         {
-          name: "58335.44",
-          title: "20252.9",
-          staff: "252.8",
-          text: "201585.68",
-          date: "2018"
+          id:1,
+          name: "h3c  s6800",
+          title: "40G",
+          staff: "2.8",
+          text: "96%",
+          date: "4kv"
         },
         {
-          name: "58335.44",
-          title: "20252.9",
-          staff: "252.8",
-          text: "201585.68",
-          date: "2018"
+          id:2,
+          name: "HW s5720",
+          title: "40G",
+          staff: "2.8",
+          text: "96%",
+          date: "4kv"
         },
         {
-          name: "58335.44",
-          title: "20252.9",
-          staff: "252.8",
-          text: "201585.68",
-          date: "2018"
+          id:3,
+          name: "H3c s5500",
+          title: "40G",
+          staff: "2.8",
+          text: "96%",
+          date: "4kv"
         },
         {
-          name: "58335.44",
-          title: "20252.9",
-          staff: "252.8",
-          text: "201585.68",
-          date: "2018"
+          id:4,
+          name: "H3c s3328",
+          title: "40G",
+          staff: "2.8",
+          text: "96%",
+          date: "4kv"
         },
         {
-          name: "58335.44",
-          title: "20252.9",
-          staff: "252.8",
-          text: "201585.68",
-          date: "2018"
+          id:5,
+          name: "H3c s5120",
+          title: "40G",
+          staff: "2.8",
+          text: "96%",
+          date: "4kv"
         },
         {
-          name: "58335.44",
-          title: "20252.9",
-          staff: "252.8",
-          text: "201585.68",
-          date: "2018"
+          id:6,
+          name: "H3c s5120",
+          title: "40G",
+          staff: "2.8",
+          text: "96%",
+          date: "4kv"
         },
         {
-          name: "58335.44",
-          title: "20252.9",
-          staff: "252.8",
-          text: "201585.68",
-          date: "2018"
+          id:7,
+          name: "H3c s5120",
+          title: "40G",
+          staff: "2.8",
+          text: "96%",
+          date: "4kv"
         },
         {
-          name: "58335.44",
-          title: "20252.9",
-          staff: "252.8",
-          text: "201585.68",
-          date: "2018"
-        },
-        {
-          name: "58335.44",
-          title: "20252.9",
-          staff: "252.8",
-          text: "201585.68",
-          date: "2018"
-        },
-        {
-          name: "58335.44",
-          title: "20252.9",
-          staff: "252.8",
-          text: "201585.68",
-          date: "2018"
+          id:8,
+          name: "H3c s5120",
+          title: "40G",
+          staff: "2.8",
+          text: "96%",
+          date: "4kv"
         }
       ]
     };
   },
-  components: {}
+  components: {},
+
+  methods: {
+   showFlag(id){
+
+     if(this.Flag == id ){
+       this.Flag = false
+     }else {
+        this.Flag = id;
+     }
+    
+   
+    }
+  },
+
+  computed: {
+    
+  },
 };
 </script>
 
@@ -116,7 +132,7 @@ export default {
   margin: 0px 0px 0px 5px;
   overflow: hidden;
   font-size: 14px;
-  height: 230px;
+  height: 190px;
   border-radius: 15px 15px 15px 15px;
 
   /* border:3px solid #47607E; */
@@ -131,6 +147,7 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   line-height: 3;
+  position: relative;
 }
 
 .textColor {
@@ -169,6 +186,20 @@ export default {
   color: #ffffff;
 }
 
+.info {
+ cursor: pointer;
+  
+}
+
+.info:hover {
+  color:#cccccc;
+}
+.propInfo {
+  position:absolute;
+  top:10px;
+  left:20px;
+}
+
 .width20 {
   width: 20%;
   text-align: center;
@@ -184,6 +215,11 @@ export default {
 }
 .width15 {
   width: 15%;
+  text-align: center;
+}
+
+.width40 {
+  width: 40%;
   text-align: center;
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div class="Table2">
     <div class="TableTitle">
-      <span>政务云系统</span>
+      <span>监控画面</span>
     </div>
 
-     <div class="TableTitleSecond">
+     <!-- <div class="TableTitleSecond">
       <div class="width30">载客汽车(万辆)</div>
       <div class="width30">载货汽车(万辆)</div>
       <div class="width30" >汽车拥有辆(万辆)</div>
@@ -25,7 +25,7 @@
         <div class="itemStaff textColor width10">{{item.date}}</div>
 
       </div>
-    </GeminiScrollbar>
+    </GeminiScrollbar> -->
   </div>
 </template>
 
@@ -33,71 +33,71 @@
 export default {
   data() {
     return {
-      List: [
-        {
-          name: "2.56",
-          title: "154.56",
-          staff: "158.54",
-          date:"2018"
-        },
-        {
-          name: "2.56",
-          title: "154.56",
-          staff: "158.54",
-          date:"2018"
-        },
-        {
-          name: "2.56",
-          title: "154.56",
-          staff: "158.54",
-          date:"2018"
-        },
-        {
-          name: "2.56",
-          title: "154.56",
-          staff: "158.54",
-          date:"2018"
-        },
-        {
-          name: "2.56",
-          title: "154.56",
-          staff: "158.54",
-          date:"2018"
-        },
-        {
-          name: "2.56",
-          title: "154.56",
-          staff: "158.54",
-          date:"2018"
-        },
-        {
-          name: "2.56",
-          title: "154.56",
-          staff: "158.54",
-          date:"2018"
-        },
-        {
-          name: "2.56",
-          title: "154.56",
-          staff: "158.54",
-          date:"2018"
-        },
-        {
-          name: "2.56",
-          title: "154.56",
-          staff: "158.54",
-          date:"2018"
-        },
-        {
-          name: "2.56",
-          title: "154.56",
-          staff: "158.54",
-          date:"2018"
-        },
+      // List: [
+      //   {
+      //     name: "2.56",
+      //     title: "154.56",
+      //     staff: "158.54",
+      //     date:"2018"
+      //   },
+      //   {
+      //     name: "2.56",
+      //     title: "154.56",
+      //     staff: "158.54",
+      //     date:"2018"
+      //   },
+      //   {
+      //     name: "2.56",
+      //     title: "154.56",
+      //     staff: "158.54",
+      //     date:"2018"
+      //   },
+      //   {
+      //     name: "2.56",
+      //     title: "154.56",
+      //     staff: "158.54",
+      //     date:"2018"
+      //   },
+      //   {
+      //     name: "2.56",
+      //     title: "154.56",
+      //     staff: "158.54",
+      //     date:"2018"
+      //   },
+      //   {
+      //     name: "2.56",
+      //     title: "154.56",
+      //     staff: "158.54",
+      //     date:"2018"
+      //   },
+      //   {
+      //     name: "2.56",
+      //     title: "154.56",
+      //     staff: "158.54",
+      //     date:"2018"
+      //   },
+      //   {
+      //     name: "2.56",
+      //     title: "154.56",
+      //     staff: "158.54",
+      //     date:"2018"
+      //   },
+      //   {
+      //     name: "2.56",
+      //     title: "154.56",
+      //     staff: "158.54",
+      //     date:"2018"
+      //   },
+      //   {
+      //     name: "2.56",
+      //     title: "154.56",
+      //     staff: "158.54",
+      //     date:"2018"
+      //   },
 
         
         
-      ]
+      // ]
     };
   },
   components: {}
@@ -109,7 +109,7 @@ export default {
   margin: 0px 10px 0px 10px;
   overflow: hidden;
   font-size: 14px;
-  height: 230px;
+  height:190px;
   border-radius: 15px 15px 15px 15px;
 
   /* border:3px solid #47607E; */

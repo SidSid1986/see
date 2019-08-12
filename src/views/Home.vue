@@ -32,6 +32,8 @@
          <Table4/>
         </div>
       </div>
+
+      <Footer/>
     </div>
   </div>
 </template>
@@ -52,6 +54,8 @@ import Table2 from '../components/Table/Table2'
 import Table3 from '../components/Table/Table3'
 import Table4 from '../components/Table/Table4'
 
+import Footer from '../components/Footer'
+
 export default {
   data() {
     return {};
@@ -68,7 +72,8 @@ export default {
     Table1,
     Table2,
     Table3,
-    Table4
+    Table4,
+    Footer
   }
 };
 </script>

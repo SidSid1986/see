@@ -5,10 +5,10 @@
     </div>
 
      <div class="TableTitleSecond">
-      <div class="width25">运营数(辆)</div>
-      <div class="width30">线路总长度(公里)</div>
-      <div class="width30" >客运总量(万人次)</div>
-      <div class="width15">日期</div>
+      <div class="width25">设备</div>
+      <div class="width30">接口</div>
+      <div class="width25" >吞吐量(Mbps)</div>
+      <div class="width20">时延(微秒)</div>
       
     </div>
 
@@ -35,71 +35,66 @@ export default {
     return {
       List: [
         {
-          name: "58544",
-          title: "20252",
-          staff: "252528",
-          date:"2018"
+          name: "华为防火墙",
+          title: "802.3ad聚合",
+          staff: "25",
+          date:"218"
         },
         {
-          name: "58544",
-          title: "20252",
-          staff: "252528",
-          date:"2018"
+          name: "思科",
+          title: "802.3ad聚合",
+          staff: "25",
+          date:"218"
         },
         {
-          name: "58544",
-          title: "20252",
-          staff: "252528",
-          date:"2018"
+          name: "深信服",
+          title: "802.3ad聚合",
+          staff: "25",
+          date:"201"
         },
         {
-          name: "58544",
-          title: "20252",
-          staff: "252528",
-          date:"2018"
+          name: "瞻博",
+          title: "802.3ad聚合",
+          staff: "25",
+          date:"201"
         },
         {
-          name: "58544",
-          title: "20252",
-          staff: "252528",
-          date:"2018"
+          name: "锐捷",
+          title: "802.3ad聚合",
+          staff: "25",
+          date:"201"
+        },
+         {
+          name: "华为防火墙",
+          title: "802.3ad聚合",
+          staff: "25",
+          date:"218"
         },
         {
-          name: "58544",
-          title: "20252",
-          staff: "252528",
-          date:"2018"
+          name: "思科",
+          title: "802.3ad聚合",
+          staff: "25",
+          date:"218"
         },
         {
-          name: "58544",
-          title: "20252",
-          staff: "252528",
-          date:"2018"
+          name: "深信服",
+          title: "802.3ad聚合",
+          staff: "25",
+          date:"201"
         },
         {
-          name: "58544",
-          title: "20252",
-          staff: "252528",
-          date:"2018"
+          name: "瞻博Juniper",
+          title: "802.3ad聚合",
+          staff: "25",
+          date:"201"
         },
         {
-          name: "58544",
-          title: "20252",
-          staff: "252528",
-          date:"2018"
+          name: "锐捷",
+          title: "802.3ad聚合",
+          staff: "25",
+          date:"201"
         },
-        {
-          name: "58544",
-          title: "20252",
-          staff: "252528",
-          date:"2018"
-        },
-        {
-          name: "58544",
-          title: "20252",
-          staff: "252528",
-          date:"2018"
-        },
+       
 
         
       ]
@@ -114,7 +109,7 @@ export default {
   margin: 0px 5px 0px 5px;
   overflow: hidden;
   font-size: 14px;
-  height: 230px;
+  height: 190px;
   border-radius: 15px 15px 15px 15px;
 
   /* border:3px solid #47607E; */
@@ -166,6 +161,7 @@ export default {
   flex-direction: row;
   justify-content:space-around;
   color:#FFFFFF;
+  text-align: left;
 }
 
 

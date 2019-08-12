@@ -5,12 +5,10 @@
     </div>
 
     <div class="TableTitleSecond">
-      <div class="width10">端口</div>
-      <div class="width10">城市</div>
-      <div class="width20">设备类型</div>
-      <div class="width20">协议</div>
-      <div class="width30">IP地址</div>
-      <div class="width10">时间</div>
+      <div class="width25">CPU</div>
+      <div class="width20">端口</div>
+      <div class="width20">城市</div>
+      <div class="width40">IP地址</div>      
     </div>
 
     <GeminiScrollbar :autoshow="true" class="ScrollBorder">
@@ -19,12 +17,10 @@
         v-for="(item, index) in List"
         :key="index"
       >
-        <div class="itemName textColor width10">{{item.name}}</div>
-        <div class="itemTitle textColor width10">{{item.title}}</div>
+        <div class="itemName textColor width25">{{item.cpu}}</div>
+        <div class="itemTitle textColor width20">{{item.title}}</div>
         <div class="itemStaff textColor width20">{{item.staff}}</div>
-        <div class="itemStaff textColor width20">{{item.text}}</div>
-        <div class="itemStaff textColor width30">{{item.ip}}</div>
-        <div class="itemStaff textColor width10">{{item.date}}</div>
+        <div class="itemStaff textColor width40">{{item.ip}}</div>
       </div>
     </GeminiScrollbar>
   </div>
@@ -36,70 +32,41 @@ export default {
     return {
       List: [
         {
-          name: "5000",
-          title: "上海",
-          staff: "数据中心",
-          text: "ddp-ddp",
+          cpu: "I7-9900",
+          title: "8080",
+          staff: "呼和浩特",
           ip:'168.192.2.5',
-          date: "2018"
         },
-         {
-          name: "5000",
-          title: "上海",
-          staff: "数据中心",
-          text: "ddp-ddp",
+        {
+          cpu: "I7-9900",
+          title: "8080",
+          staff: "呼和浩特",
           ip:'168.192.2.5',
-          date: "2018"
         },
-         {
-          name: "5000",
-          title: "上海",
-          staff: "数据中心",
-          text: "ddp-ddp",
+        {
+          cpu: "I7-9900",
+          title: "8080",
+          staff: "呼和浩特",
           ip:'168.192.2.5',
-          date: "2018"
         },
-         {
-          name: "5000",
-          title: "上海",
-          staff: "数据中心",
-          text: "ddp-ddp",
+        {
+          cpu: "I7-9900",
+          title: "8080",
+          staff: "呼和浩特",
           ip:'168.192.2.5',
-          date: "2018"
         },
-         {
-          name: "5000",
-          title: "上海",
-          staff: "数据中心",
-          text: "ddp-ddp",
+        {
+          cpu: "I7-9900",
+          title: "8080",
+          staff: "呼和浩特",
           ip:'168.192.2.5',
-          date: "2018"
         },
-         {
-          name: "5000",
-          title: "上海",
-          staff: "数据中心",
-          text: "ddp-ddp",
+        {
+          cpu: "I7-9900",
+          title: "8080",
+          staff: "呼和浩特",
           ip:'168.192.2.5',
-          date: "2018"
-        },
-         {
-          name: "5000",
-          title: "上海",
-          staff: "数据中心",
-          text: "ddp-ddp",
-          ip:'168.192.2.5',
-          date: "2018"
-        },
-         {
-          name: "5000",
-          title: "上海",
-          staff: "数据中心",
-          text: "ddp-ddp",
-          ip:'168.192.2.5',
-          date: "2018"
-        },
-        
+        }       
       ]
     };
   },
@@ -112,7 +79,7 @@ export default {
   margin: 0px 10px 0px 10px;
   overflow: hidden;
   font-size: 14px;
-  height: 230px;
+  height: 184px;
   border-radius: 15px 15px 15px 15px;
 
   border:3px solid #47607E;
@@ -150,6 +117,7 @@ export default {
   color: #ffffff;
   font-weight: bold;
   border-radius: 15px 15px 0 0;
+  
 }
 
 .TableTitle span {
@@ -161,8 +129,9 @@ export default {
 .TableTitleSecond {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content:space-around;
   color: #ffffff;
+  text-align: center;
 }
 
 .width10 {
@@ -187,4 +156,11 @@ export default {
   width: 15%;
   text-align: center;
 }
+
+.width40 {
+  width: 40%;
+  text-align: center;
+}
+
+
 </style>
