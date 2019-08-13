@@ -9,12 +9,15 @@
           <RH />
         </div>
         <div class="FirstLineMiddle">
-          <Lines3 />
+          <!-- <Lines3 /> -->
+          <!-- <SDmap/> -->
+          <!-- <SDmap2/> -->
+          <SDmap3/>
         </div>
         <div class="FirstLineRight">
           <Alarm/>
           <!-- <ScrollView/> -->
-          <!-- <UPS /> -->
+          <UPS />
         </div>
       </div>
       <!-- 底部一行 -->
@@ -47,6 +50,11 @@ import Lines from "../components/Lines/Lines";
 import Lines2 from "../components/Lines2/Lines2";
 import Lines3 from "../components/Lines3/Lines3";
 
+import SDmap from '../components/SDmap/SDmap';
+import SDmap2 from '../components/SDmap2/SDmap2'
+import SDmap3 from '../components/SDmap3/SDmap3'
+
+
 import UPS from "../components/UPS.vue";
 import ScrollView from '../components/ScrollView'
 
@@ -55,7 +63,7 @@ import Table2 from '../components/Table/Table2/Table2'
 import Table3 from '../components/Table/Table3/Table3'
 import Table4 from '../components/Table/Table4'
 
-import Alarm from '../components/Alarm.vue'
+import Alarm from '../components/Alarm/Alarm'
 
 import Footer from '../components/Footer'
 
@@ -77,6 +85,9 @@ export default {
     Table2,
     Table3,
     Table4,
+    SDmap,
+    SDmap2, 
+    SDmap3,
 
     Footer
   }

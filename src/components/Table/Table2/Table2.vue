@@ -118,6 +118,9 @@ export default {
 </script>
 
 <style scoped>
+.ScrollBorder {
+  height:140px;
+}
 .Table2 {
   position: relative;
   margin: 0px 5px 0px 0px;
@@ -181,7 +184,7 @@ export default {
 .DetailLogo {
   position:absolute;
   top: 5px;
-  right:5px;
+  right:0px;
 }
 
 

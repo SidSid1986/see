@@ -10,8 +10,9 @@
 
     <div class="TableTitleSecond">
       <div class="width25">设备</div>
-      <div class="width10">状态</div>
-      <span class="width15">详情</span>
+      <div class="width25">编号</div>
+      <div class="width25">状态</div>
+      <span class="width25">详情</span>
     </div>
 
     <GeminiScrollbar :autoshow="true" class="ScrollBorder">
@@ -22,17 +23,22 @@
         :key="item.id"
       >
         <div class="itemName textColor width25">{{item.name}}</div>
-        <div class="itemTitle textColor width10">{{item.line}}</div>
-        <div class="itemStaff textColor width15">{{item.delayTime}}</div>
-        <div class="itemStaff textColor width20">{{item.max}}</div>
-        <div class="itemStaff textColor width15">{{item.protect}}</div>
-        <span class="itemStaff textColor width15 info">详情</span>
+        <div class="itemName textColor width25">{{item.id}}</div>
+        <div class="itemName textColor width25 ">
+          <span class="bling">异常</span>
+        </div>
+
+        <div class="width25">
+          <InfoDetail :Name="item.name" :Id="item.id" />
+        </div>
       </div>
     </GeminiScrollbar>
   </div>
 </template>
 
 <script>
+import InfoDetail from "./AlarmDetail";
+
 export default {
   data() {
     return {
@@ -41,37 +47,45 @@ export default {
         {
           id: 1,
           name: "h3c  s6800",
-          status:false,
-          
+          status: false
         },
         {
           id: 2,
           name: "HW s5720",
-          status:false,
-          
+          status: false
         },
         {
           id: 3,
           name: "H3c s5500",
-          status:false,
-          
+          status: false
         },
         {
           id: 4,
           name: "思科",
-          status:false,
-          
+          status: false
         },
         {
           id: 5,
           name: "瞻博",
-          status:false,
+          status: false
         },
-        
+
+        {
+          id: 6,
+          name: "H3c s5500",
+          status: false
+        },
+        {
+          id: 7,
+          name: "思科",
+          status: false
+        }
       ]
     };
   },
-  components: {},
+  components: {
+    InfoDetail
+    },
 
   methods: {
     showFlag(id) {
@@ -88,9 +102,13 @@ export default {
 </script>
 
 <style scoped>
+.ScrollBorder {
+  height: 140px;
+}
+
 .Alarm {
   margin: 60px 10px 10px 10px;
-  padding: 0px 10px;
+  /* padding: 0px 10px; */
   position: relative;
   overflow: hidden;
   font-size: 14px;
@@ -105,7 +123,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  line-height: 3;
+  line-height: 2.5;
   position: relative;
 }
 
@@ -166,6 +184,37 @@ export default {
   /* top:10px;
   left:20px;
   z-index:999; */
+}
+
+.bling {
+  animation: bling 1.5s linear infinite;
+  background-color: #d53a35;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+@keyframes bling {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes bling {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .width20 {

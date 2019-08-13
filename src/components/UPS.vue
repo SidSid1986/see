@@ -1,7 +1,7 @@
 <template>
   <div id="UPSGroup">
     <!--创建一个echarts的容器-->
-    <div id="UPS" style="height:220px;"></div>
+    <div id="UPS" style="height:210px;"></div>
     <div class="UPSTitle">UPS电压</div>
     <div class="currentUPS">单位KVA</div>
   </div>
