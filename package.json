@@ -21,6 +21,7 @@
     "vue-gemini-scrollbar": "^2.0.1",
     "vue-router": "^3.0.3",
     "vue-seamless-scroll": "^1.1.17",
+    "vue-video-player": "^5.0.2",
     "vuex": "^3.0.1"
   },
   "devDependencies": {

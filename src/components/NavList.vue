@@ -144,10 +144,10 @@ export default {
 
           ]
         },
-        {
-          value: "denglu",
-          label: "登录",
-        },
+        // {
+        //   value: "denglu",
+        //   label: "登录",
+        // },
 
       ],
       selectedOptions: [],
@@ -181,7 +181,7 @@ export default {
 }
 
 .el-cascader-menu__wrap.el-scrollbar__wrap {
-    height:267px;
+    height:240px;
 }
 
 

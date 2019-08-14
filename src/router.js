@@ -7,6 +7,8 @@ import Table1Detail from './components/Table/Table1/Table1Detail.vue'
 import Table2Detail from './components/Table/Table2/Table2Detail.vue'
 import Table3Detail from './components/Table/Table3/Table3Detail.vue'
 
+import Alarm from './components/Alarm/Alarm.vue'
+
 
 Vue.use(Router)
 
@@ -39,6 +41,11 @@ export default new Router({
       path:'/Table3Detail',
       name:'Table3Detail',
       component:Table3Detail
+    },
+    {
+      path:'/Alarm',
+      name:'Alarm',
+      component:Alarm
     }
     // {
     //   path: '/about',

@@ -40,7 +40,7 @@ export default {
       [
         {
           name: '菏泽',
-          value: 88
+          value: 60
         },
         {
           name: '气象局'
@@ -49,7 +49,7 @@ export default {
       [
         {
           name: '滨州',
-          value: 77
+          value: 60
         },
         {
           name: '气象局'
@@ -58,7 +58,7 @@ export default {
       [
         {
           name: '聊城',
-          value: 66
+          value: 60
         },
         {
           name: '气象局'
@@ -67,7 +67,7 @@ export default {
       [
         {
           name: '德州',
-          value: 44
+          value: 60
         },
         {
           name: '气象局'
@@ -76,24 +76,6 @@ export default {
       [
         {
           name: '临沂',
-          value: 33
-        },
-        {
-          name: '气象局'
-        }
-      ],
-      [
-        {
-          name: '日照',
-          value: 55
-        },
-        {
-          name: '气象局'
-        }
-      ],
-      [
-        {
-          name: '济南',
           value: 100
         },
         {
@@ -102,8 +84,26 @@ export default {
       ],
       [
         {
+          name: '日照',
+          value: 60
+        },
+        {
+          name: '气象局'
+        }
+      ],
+      [
+        {
+          name: '济南',
+          value: 60
+        },
+        {
+          name: '气象局'
+        }
+      ],
+      [
+        {
           name: '潍坊',
-          value: 70
+          value: 60
         },
         {
           name: '气象局'
@@ -112,7 +112,7 @@ export default {
       [
         {
           name: '青岛',
-          value: 30
+          value: 100
         },
         {
           name: '气象局'
@@ -121,7 +121,7 @@ export default {
       [
         {
           name: '淄博',
-          value: 50
+          value: 100
         },
         {
           name: '气象局'
@@ -130,7 +130,7 @@ export default {
       [
         {
           name: '枣庄',
-          value: 20
+          value:60
         },
         {
           name: '气象局'
@@ -139,7 +139,7 @@ export default {
       [
         {
           name: '东营',
-          value: 10
+          value: 60
         },
         {
           name: '气象局'
@@ -148,7 +148,7 @@ export default {
       [
         {
           name: '济宁',
-          value: 80
+          value: 60
         },
         {
           name: '气象局'
@@ -157,7 +157,7 @@ export default {
       [
         {
           name: '泰安',
-          value: 55
+          value: 60
         },
         {
           name: '气象局'
@@ -166,7 +166,7 @@ export default {
       [
         {
           name: '威海',
-          value: 90
+          value: 60
         },
         {
           name: '气象局'
@@ -194,12 +194,13 @@ export default {
       return res;
     };
 
-    var color = ["#a6c84c", "#ffa022", "#46bee9"];
+
     var series = [];
     [["气象局", SDData]].forEach(function(item, i) {
       series.push(
         {
           type: "lines",
+          
           zlevel: 2,
           effect: {
             show: true,
@@ -270,7 +271,7 @@ export default {
               show: true,
               position: "right",
               //			                offset:[5, 0],
-
+              fontSize:18,
               color: "#00ffff",
               formatter: "{b}",
               textStyle: {
@@ -300,13 +301,18 @@ export default {
     });
 
     let option =  {
+    //   tooltip: {
+        
+    // },
     backgroundColor: '#404a59',
 
+//线，原点颜色
     visualMap: {
-        min: 0,
+        min: 60,
         max: 100,
+        show: false,
         calculable: true,
-        color: ['#ff3333', 'orange', 'yellow', 'lime', 'aqua'],
+        color: ['red', '#00FB00'],
         textStyle: {
             color: '#fff'
         }
@@ -315,9 +321,10 @@ export default {
         map: '山东',
         label: {
             emphasis: {
-                show: false
+                show: false,
             }
         },
+        zoom: 1.3,
         roam: true,
         layoutCenter: ['50%', '53%'],
         layoutSize: "108%",

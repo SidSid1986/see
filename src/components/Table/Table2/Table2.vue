@@ -5,15 +5,15 @@
     </div>
 
     <div class="DetailLogo" @click="gotoDetail">
-      <img src="../../../../public/logo/detail.png" alt="">
+      <img src="../../../../public/logo/detail.png" alt />
     </div>
 
-     <div class="TableTitleSecond">
+    <div class="TableTitleSecond">
       <div class="width25">设备</div>
-      <div class="width30">接口</div>
-      <div class="width25" >吞吐量(Mbps)</div>
-      <div class="width20">时延(微秒)</div>
-      
+      <div class="width25">接口</div>
+      <div class="width20">吞吐量</div>
+      <div class="width15">时延</div>
+      <div class="width15">详情</div>
     </div>
 
     <GeminiScrollbar :autoshow="true" class="ScrollBorder">
@@ -23,17 +23,26 @@
         v-for="(item, index) in List"
         :key="index"
       >
-        <div class="itemName textColor width25 ">{{item.name}}</div>
-        <div class="itemTitle textColor width30">{{item.title}}</div>
-        <div class="itemStaff textColor width25">{{item.staff}}</div>
-        <div class="itemStaff textColor width20">{{item.date}}</div>
+        <div class="itemName textColor width25">{{item.name}}</div>
+        <div class="itemTitle textColor width25">{{item.title}}</div>
+        <div class="itemStaff textColor width20">{{item.staff}}</div>
+        <div class="itemStaff textColor width15">{{item.date}}</div>
 
+        <div class="width15">
+          <InfoDetail2
+            :Name="item.name"
+            :Line="item.title"
+            :delayTime="item.staff"
+            :Max="item.date"
+          />
+        </div>
       </div>
     </GeminiScrollbar>
   </div>
 </template>
 
 <script>
+import InfoDetail2 from "../Table2/InfoDetail2";
 export default {
   data() {
     return {
@@ -42,84 +51,81 @@ export default {
           name: "华为防火墙",
           title: "802.3ad聚合",
           staff: "25",
-          date:"218"
+          date: "218"
         },
         {
           name: "思科",
           title: "802.3ad聚合",
           staff: "25",
-          date:"218"
+          date: "218"
         },
         {
           name: "深信服",
           title: "802.3ad聚合",
           staff: "25",
-          date:"201"
+          date: "201"
         },
         {
           name: "瞻博",
           title: "802.3ad聚合",
           staff: "25",
-          date:"201"
+          date: "201"
         },
         {
           name: "锐捷",
           title: "802.3ad聚合",
           staff: "25",
-          date:"201"
+          date: "201"
         },
-         {
+        {
           name: "华为防火墙",
           title: "802.3ad聚合",
           staff: "25",
-          date:"218"
+          date: "218"
         },
         {
           name: "思科",
           title: "802.3ad聚合",
           staff: "25",
-          date:"218"
+          date: "218"
         },
         {
           name: "深信服",
           title: "802.3ad聚合",
           staff: "25",
-          date:"201"
+          date: "201"
         },
         {
           name: "瞻博Juniper",
           title: "802.3ad聚合",
           staff: "25",
-          date:"201"
+          date: "201"
         },
         {
           name: "锐捷",
           title: "802.3ad聚合",
           staff: "25",
-          date:"201"
-        },
-       
-
-        
+          date: "201"
+        }
       ]
     };
   },
 
   methods: {
-    gotoDetail(){
+    gotoDetail() {
       console.log(1);
-      this.$router.push({name:'Table2Detail'})
+      this.$router.push({ name: "Table2Detail" });
       // this.$router.push({ path: '/Table2Detail'})
     }
   },
 
-  components: {}
+  components: { InfoDetail2 }
 };
 </script>
 
 <style scoped>
 .ScrollBorder {
-  height:140px;
+  height: 140px;
 }
 .Table2 {
   position: relative;
@@ -135,7 +141,6 @@ export default {
 
 .ScrollBorder {
   overflow: hidden;
-  
 }
 .ListTable {
   display: flex;
@@ -154,7 +159,7 @@ export default {
 }
 
 .ListBgcTwo {
-  background-color: #47607E;
+  background-color: #47607e;
 }
 
 .TableTitle {
@@ -162,31 +167,30 @@ export default {
   /* background-color: red; */
   padding: 10px;
   font-size: 16px;
-  color:#FFFFFF;
+  color: #ffffff;
   font-weight: bold;
   border-radius: 15px 15px 0 0;
 }
 
-.TableTitle span{
+.TableTitle span {
   padding: 5px 15px;
-  background: #00BDB1;
+  background: #00bdb1;
   border-radius: 10px;
 }
 
 .TableTitleSecond {
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
-  color:#FFFFFF;
+  justify-content: space-around;
+  color: #ffffff;
   text-align: left;
 }
 
 .DetailLogo {
-  position:absolute;
+  position: absolute;
   top: 5px;
-  right:0px;
+  right: 0px;
 }
-
 
 .width25 {
   width: 25%;

@@ -5,32 +5,37 @@
     </div>
 
     <div class="DetailLogo" @click="gotoDetail">
-      <img src="../../../../public/logo/detail.png" alt="">
+      <img src="../../../../public/logo/detail.png" alt />
     </div>
 
     <div class="TableTitleSecond">
       <div class="width25">CPU</div>
       <div class="width20">端口</div>
-      <div class="width20">城市</div>
-      <div class="width40">IP地址</div>      
+      <!-- <div class="width20">城市</div> -->
+      <div class="width35">IP地址</div>
+      <div class="width20">详情</div>
+
     </div>
 
     <GeminiScrollbar :autoshow="true" class="ScrollBorder">
-      <div
-        class="ListTable"
-        v-for="(item, index) in List"
-        :key="index"
-      >
+      <div class="ListTable" v-for="(item, index) in List" :key="index">
         <div class="itemName textColor width25">{{item.cpu}}</div>
         <div class="itemTitle textColor width20">{{item.title}}</div>
-        <div class="itemStaff textColor width20">{{item.staff}}</div>
-        <div class="itemStaff textColor width40">{{item.ip}}</div>
+        <!-- <div class="itemStaff textColor width20">{{item.staff}}</div> -->
+        <div class="itemStaff textColor width35">{{item.ip}}</div>
+
+        <div class="width20">
+        <InfoDetail1 :Name="item.cpu" :Line="item.title" :delayTime="item.ip" :Max="item.ip" />
+      </div>
+
+
       </div>
     </GeminiScrollbar>
   </div>
 </template>
 
 <script>
+import InfoDetail1 from "../Table1/InfoDetial1";
 export default {
   data() {
     return {
@@ -39,56 +44,58 @@ export default {
           cpu: "I7-9900",
           title: "8080",
           staff: "呼和浩特",
-          ip:'168.192.2.5',
+          ip: "168.192.2.5"
         },
         {
           cpu: "I7-9900",
           title: "8080",
           staff: "呼和浩特",
-          ip:'168.192.2.5',
+          ip: "168.192.2.5"
         },
         {
           cpu: "I7-9900",
           title: "8080",
           staff: "呼和浩特",
-          ip:'168.192.2.5',
+          ip: "168.192.2.5"
         },
         {
           cpu: "I7-9900",
           title: "8080",
           staff: "呼和浩特",
-          ip:'168.192.2.5',
+          ip: "168.192.2.5"
         },
         {
           cpu: "I7-9900",
           title: "8080",
           staff: "呼和浩特",
-          ip:'168.192.2.5',
+          ip: "168.192.2.5"
         },
         {
           cpu: "I7-9900",
           title: "8080",
           staff: "呼和浩特",
-          ip:'168.192.2.5',
-        }       
+          ip: "168.192.2.5"
+        }
       ]
     };
   },
 
   methods: {
-    gotoDetail(){
+    gotoDetail() {
       console.log(1);
-      this.$router.push({name:'Table1Detail'})
+      this.$router.push({ name: "Table1Detail" });
       // this.$router.push({ path: '/Table2Detail'})
     }
   },
-  components: {}
+  components: {
+    InfoDetail1
+  }
 };
 </script>
 
 <style scoped>
 .ScrollBorder {
-  height:140px;
+  height: 140px;
 }
 .Table1 {
   position: relative;
@@ -98,8 +105,8 @@ export default {
   height: 184px;
   border-radius: 15px 15px 15px 15px;
 
-  border:3px solid #47607E;
-  background-color: #6B6B83;
+  border: 3px solid #47607e;
+  background-color: #6b6b83;
 }
 
 .ScrollBorder {
@@ -133,7 +140,6 @@ export default {
   color: #ffffff;
   font-weight: bold;
   border-radius: 15px 15px 0 0;
-  
 }
 
 .TableTitle span {
@@ -145,15 +151,15 @@ export default {
 .TableTitleSecond {
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
+  justify-content: space-around;
   color: #ffffff;
   text-align: center;
 }
 
 .DetailLogo {
-  position:absolute;
+  position: absolute;
   top: 5px;
-  right:0px;
+  right: 0px;
 }
 
 .width10 {
@@ -183,6 +189,4 @@ export default {
   width: 40%;
   text-align: center;
 }
-
-
 </style>

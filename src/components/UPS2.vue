@@ -1,7 +1,7 @@
 <template>
   <div id="UPSGroup">
     <!--创建一个echarts的容器-->
-    <div id="UPS" style="height:220px;"></div>
+    <div id="UPS2" style="height:220px;"></div>
     <div class="UPSTitle">UPS电压</div>
     <div class="currentUPS">单位KVA</div>
   </div>
@@ -12,51 +12,44 @@ let echarts = require("echarts");
 export default {
   mounted() {
     // 基于准备好的dom，初始化echarts实例
-    let myChart = echarts.init(document.getElementById("UPS"));
+    let myChart = echarts.init(document.getElementById("UPS2"));
 
     // 绘制图表
     let option = {
-      tooltip: {
-        // formatter: "{a} <br/>{b} : {c}℃"
-      },
-      toolbox: {
-        feature: {
-          restore: {},
-          saveAsImage: {}
-        }
-      },
-      series: [
-        {
-          name: "UPS温度",
-          type: "gauge",
-          detail: { formatter: "{value}", fontSize: 14,color:"#C85060" },
-          data: [
-            //起始温度
-            // { value: 0, name: "温度" },
-            { value: 0, },
-
-            ],
-           min: 0,                 // 最小的数据值,默认 0 。映射到 minAngle。
-           max: 200,  
-           splitNumber:5,
-          title: {
-            textStyle: {
-              // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-              fontWeight: "bolder",
-              fontSize: 15,
-              fontStyle: "italic",
-              color: "#C85060"
+      backgroundColor: "#ffffff",
+    color: ["#37A2DA", "#32C5E9", "#67E0E3"],
+    series: [{
+        // name: '业务指标',
+        type: 'gauge',
+        detail: {
+            formatter: '{value}%'
+        },
+        axisLine: {
+            show: true,
+            lineStyle: {
+                width: 30,
+                shadowBlur: 0,
+                color: [
+                    [0.3, '#67e0e3'],
+                    [0.7, '#37a2da'],
+                    [1, '#fd666d']
+                ]
             }
-          }
-        }
-      ]
+        },
+        data: [{
+            value: 50,
+            // name: '完成率',
+        }]
+
+    }]
+      
     };
     myChart.setOption(option);
 
-    setInterval(() =>{
-      option.series[0].data[0].value = this.dataNumber[Math.floor((Math.random()*this.dataNumber.length))];//这里是传过来的温度
-      myChart.setOption(option, true);
-    }, 2000);
+    setInterval(function() {
+    option.series[0].data[0].value = (Math.random() * 100).toFixed(2) - 0;
+    myChart.setOption(option, true);
+}, 2000);
 
     this.currentNumber = option.series[0].data[0].value
   },
@@ -88,9 +81,10 @@ export default {
   padding: 0px 10px 0 10px;
 }
 
-#UPS {
+#UPS2 {
   /* background-color: #47607e; */
   background-color: #47607e;
+  
   margin-top: 60px;
   border-radius: 15px;
   margin-bottom: 10px;
@@ -100,8 +94,8 @@ export default {
 
 .UPSTitle {
   position: absolute;
-  top:5px;
-  left:15px;
+  top:25px;
+  left:20px;
   font-size: 15px;
   font-weight: bold;
   color:#FFFFFF;
@@ -112,8 +106,8 @@ export default {
 
 .currentUPS{
   position: absolute;
-  top:5px;
-  right:15px;
+  top:25px;
+  right:20px;
   font-size: 15px;
   font-weight: bold;
   color:#FFFFFF;

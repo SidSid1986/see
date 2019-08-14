@@ -32,7 +32,7 @@
         <!-- <span @click="showFlag(item.id)" class="itemStaff textColor width15 info">详情</span> -->
 
         <div class="width15">
-          <InfoDetail :Name="item.name" :Line="item.line" :delayTime="item. delayTime" :Max="item.max" :Protect="item.protect"/>
+          <InfoDetail3 :Name="item.name" :Line="item.line" :delayTime="item. delayTime" :Max="item.max" :Protect="item.protect"/>
         </div>
       </div>
     </GeminiScrollbar>
@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import InfoDetail from "../Table3/InfoDetail";
+import InfoDetail3 from "../Table3/InfoDetail3";
 
 export default {
   data() {
@@ -114,7 +114,7 @@ export default {
       ]
     };
   },
-  components: { InfoDetail },
+  components: { InfoDetail3 },
 
   methods: {
     showFlag(id) {

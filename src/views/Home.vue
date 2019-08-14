@@ -15,9 +15,13 @@
           <SDmap3/>
         </div>
         <div class="FirstLineRight">
-          <Alarm/>
-          <!-- <ScrollView/> -->
           <UPS />
+          <!-- <UPS2 /> -->
+          <!-- <Alarm/> -->
+          <ScrollView/>
+          <!-- <UPS /> -->
+          
+
         </div>
       </div>
       <!-- 底部一行 -->
@@ -56,6 +60,8 @@ import SDmap3 from '../components/SDmap3/SDmap3'
 
 
 import UPS from "../components/UPS.vue";
+import UPS2 from "../components/UPS2.vue";
+
 import ScrollView from '../components/ScrollView'
 
 import Table1 from '../components/Table/Table1/Table1'
@@ -80,6 +86,7 @@ export default {
     Lines3,
     Alarm,
     UPS,
+    UPS2,
     ScrollView,
     Table1,
     Table2,

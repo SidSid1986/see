@@ -15,7 +15,7 @@
       <span class="width25">详情</span>
     </div>
 
-    <GeminiScrollbar :autoshow="true" class="ScrollBorder">
+    <!-- <GeminiScrollbar :autoshow="true" class="ScrollBorder"> -->
       <div
         class="ListTable"
         :class="[index%2==1 ?'ListBgcOne':'ListBgcTwo']"
@@ -32,7 +32,7 @@
           <InfoDetail :Name="item.name" :Id="item.id" />
         </div>
       </div>
-    </GeminiScrollbar>
+    <!-- </GeminiScrollbar> -->
   </div>
 </template>
 
@@ -107,13 +107,13 @@ export default {
 }
 
 .Alarm {
-  margin: 60px 10px 10px 10px;
+  /* margin: 60px 10px 10px 10px; */
   /* padding: 0px 10px; */
   position: relative;
   overflow: hidden;
   font-size: 14px;
-  height: 190px;
-  border-radius: 15px 15px 15px 15px;
+  /* height: 190px; */
+  /* border-radius: 15px 15px 15px 15px; */
 
   /* border:3px solid #47607E; */
   background-color: #47607e;
@@ -154,6 +154,8 @@ export default {
   padding: 5px 15px;
   background: #d53a35;
   border-radius: 10px;
+
+  font-size: 30px;
 }
 
 .DetailLogo {
