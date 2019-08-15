@@ -5,7 +5,7 @@
         <NavList />
       </el-col>
       <el-col :span="12">
-        <div class="HomeNavTitle">监控和网络中心</div>
+        <div class="HomeNavTitle">气象监控和网络中心</div>
       </el-col>
       <el-col :span="2" >
         <img @click="gotoAlarm" class="HomeNavLogo" src="../assets/alarm.png" alt="">

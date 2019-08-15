@@ -229,6 +229,7 @@ export default {
             scale: 4
           },
           label: {
+           
             normal: {
               show: true,
               position: "right",
@@ -267,6 +268,7 @@ export default {
             scale: 4
           },
           label: {
+            fontSize:18,
             normal: {
               show: true,
               position: "right",

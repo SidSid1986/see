@@ -12,7 +12,8 @@
           <!-- <Lines3 /> -->
           <!-- <SDmap/> -->
           <!-- <SDmap2/> -->
-          <SDmap3/>
+          <!-- <SDmap3/> -->
+          <YTmap/>
         </div>
         <div class="FirstLineRight">
           <UPS />
@@ -57,6 +58,7 @@ import Lines3 from "../components/Lines3/Lines3";
 import SDmap from '../components/SDmap/SDmap';
 import SDmap2 from '../components/SDmap2/SDmap2'
 import SDmap3 from '../components/SDmap3/SDmap3'
+import YTmap from '../components/YTmap/YTmap'
 
 
 import UPS from "../components/UPS.vue";
@@ -95,6 +97,7 @@ export default {
     SDmap,
     SDmap2, 
     SDmap3,
+    YTmap,
 
     Footer
   }
