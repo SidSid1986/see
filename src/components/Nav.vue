@@ -8,7 +8,7 @@
         <div class="HomeNavTitle">气象监控和网络中心</div>
       </el-col>
       <el-col :span="2" >
-        <img @click="gotoAlarm" class="HomeNavLogo" src="../assets/alarm.png" alt="">
+        <img @click="gotoAlarm" class="HomeNavLogo" src="../assets/alarm2.png" alt="">
       </el-col>
       <!-- <Alarm class="Alarm"/> -->
      
