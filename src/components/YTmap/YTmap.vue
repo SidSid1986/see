@@ -27,8 +27,8 @@ export default {
     // 基于准备好的dom，初始化echarts实例
     let myChart = echarts.init(document.getElementById("YTmap"));
     var geoCoordMap = {
-      牟平: [121.77757,37.342506],
-      福山:[121.518745,37.550016],
+      牟平区: [121.77757,37.342506],
+      福山区:[121.518745,37.550016],
       开发区:[121.4748,37.669685],
       长岛县: [121.017847,37.976268], //上海
       东莞: [113.8953, 22.901],
@@ -221,7 +221,7 @@ export default {
       ],
       [
         {
-          name: "牟平",
+          name: "牟平区",
           value: 100
         },
         {
@@ -239,7 +239,7 @@ export default {
       ],
       [
         {
-          name: "福山",
+          name: "福山区",
           value: 60
         },
         {
