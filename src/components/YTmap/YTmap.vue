@@ -22,7 +22,7 @@ let echarts = require("echarts");
 
 // import "echarts/map/js/china";
 // import "echarts/map/js/province/shandong";
-import yantai from "echarts/map/json/yt.json";
+import yantai from "../../static/yt.json";
 export default {
   mounted() {
     //注册烟台地图
